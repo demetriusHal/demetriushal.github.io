@@ -6,7 +6,7 @@ subtitle: Why you'd want to go on a date with me
 
 My name is Dimitris Hal. I have the following qualities:
 
-- I have curly hair that looks socially acceptable with minimum care
+- I am an abysmal liar
 - I'm extremely loyal to my fanbase
 
 What else do you need?

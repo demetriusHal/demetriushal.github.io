@@ -44,7 +44,7 @@ Let’s also take a look at the same data for the case of Bitcoin.
 
 
 
-Autoregressive Models
+## Autoregressive Models
 
 Now. it’s time to get a bit more technical.
 
@@ -53,3 +53,41 @@ Autoregressive models are frequently used in finance for predictions in time ser
 Let’s plot the autocorrelation between the S&P price at time t and the prices at various days before that, such as the previous day, 5, 10, and 14 days before. We see that prices of a given day are highly correlated with the prices of previous days. The further back we are looking at the looser the correlation becomes.
 
 ### Insert Autocorrelation Figures for S&P
+
+bla
+
+## Predicting with Autoregressive Models and Google Trends
+
+Now we are ready to predict some S&P 500 and Bitcoin prices using autoregression. We will showcase the performance of two such models; one that uses only the prices of the five previous days to predict the current one and one that also utilizes the Google Trends of the day whose price we are trying to predict.
+
+The next figure shows the results of the predictions.
+
+
+### Insert all time predictions for S&P
+
+Let’s focus on a smaller time frame, specifically the one when coronavirus peaked. The three figures below show the prediction results for that period. We see that the model guided by the trends performs worse. 
+
+How can we explain that? As we mentioned earlier, the Google searches for “S&P 500” during those days were at their peak. However, they do not provide the model with any “sense” about the motive behind those searches. Are people confident or uncertain? We will try to provide a solution to the problem in the next paragraph.
+
+### Insert corona predictions for S&P
+
+## Sentimental analysis of news
+
+Sentimental analysis is the process of analyzing a natural language phrase and assigning a value to it that measures how positive (value greater than zero) or negative (value less than zero) that phrase is.
+
+## Embedding Sentiments in Predictions
+
+We analyzed news headlines for the mentioned time periods and performed sentimental analysis on them. For this purpose we use a tool named TextBlob.
+
+Our intuition is that positive news drive stock prices up, while negative news have the opposite effect. We embed the daily average sentiment of news in our model, by multiplying that value with the Google Trends value for that day. The idea is that if Trends are high for a day because of some bad news, multiplying them with a negative value will have the desired effect.
+
+We see that our intuition is indeed correct! The predictions of the model that utilizes the news are indeed better than the one that only utilizes the trends. To provide some numbers, from 15 February 2020 to 15 April 2020 the former model has a mean absolute error of 91.68 while, the former has error equal to 92.18.
+
+### Insert corona predictions for S&P with news
+
+
+So, are we going to get rich?
+
+Probably not! 
+
+But, in this we showed how news can be utilized to improve the predictions of a model about stock market prices.
