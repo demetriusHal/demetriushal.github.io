@@ -100,7 +100,7 @@ We also attempt to predict bitcoin price changes. The news' addition slightly im
 
 So, are we going to get rich? Probably not! 
 
-But overall, by adding sentimental analysis of news, we slightly improved the trends model in both datasets. In the table bello you can see the mae improvement which is less than 0.3%.
+But overall, by adding sentimental analysis of news, we slightly improved the trends model in both datasets. In the table below we can see the mae improvement which is marginal.
 
 ![image](/assets/img/tables.png)
 
